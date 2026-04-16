@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub 项目考古研究</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: #24292e;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #586069;
+            font-size: 1.1rem;
+        }
+        
+        .intro {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .intro h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #24292e;
+        }
+        
+        .article-list {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .article-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .article-title {
+            font-size: 1.4rem;
+            color: #0366d6;
+            margin-bottom: 10px;
+        }
+        
+        .article-meta {
+            color: #586069;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .article-desc {
+            color: #586069;
+            line-height: 1.6;
+        }
+        
+        .skill-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .skill-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #24292e;
+        }
+        
+        .skill-section code {
+            background: #f6f8fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 0.9em;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #586069;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 GitHub 项目考古研究</h1>
+            <p class="subtitle">深度分析开源项目的核心洞察、架构设计与价值意义</p>
+        </header>
+        
+        <section class="intro">
+            <h2>关于本系列</h2>
+            <p>
+                这是一系列基于"思想考古学家与科技散文家"方法论撰写的 GitHub 项目深度分析。
+                每篇文章都遵循严格的写作标准：逻辑闭环、高认知密度、避免陈词滥调，
+                通过代码考古挖掘项目背后的技术洞察与设计哲学。
+            </p>
+        </section>
+        
+        <section class="article-list">
+            <a href="网络的网络-Mixin%20Network代码考古.md" class="article-card">
+                <h3 class="article-title">网络的网络：Mixin Network 代码考古</h3>
+                <div class="article-meta">⭐ 525 stars | Go | 2018-04-27</div>
+                <p class="article-desc">
+                    基于 BFT-DAG 的分布式网络，通过异步共识实现可扩展性。
+                    从单核到多核：将区块链从"全球单线程计算机"转变为"分布式多线程网络"。
+                </p>
+            </a>
+            
+            <a href="信任的分解-Mixin%20Safe代码考古.md" class="article-card">
+                <h3 class="article-title">信任的分解：Mixin Safe 代码考古</h3>
+                <div class="article-meta">⭐ 24 stars | Go, Rust | 2023-03-05</div>
+                <p class="article-desc">
+                    基于 MPC 的非托管多重签名钱包，通过分布式密钥生成消除单点故障。
+                    从"信任一个人"到"信任一群人"：密码学实现的多维度信任分解。
+                </p>
+            </a>
+            
+            <a href="入口的争夺-Mixin%20iOS%20App代码考古.md" class="article-card">
+                <h3 class="article-title">入口的争夺：Mixin iOS App 代码考古</h3>
+                <div class="article-meta">⭐ 518 stars | Swift, Objective-C | 2018-04-27</div>
+                <p class="article-desc">
+                    Mixin Network 官方 iOS 客户端，整合消息、钱包和 DApp 浏览器。
+                    在中心化平台上构建去中心化体验：平台政治与超级应用的困境。
+                </p>
+            </a>
+            
+            <a href="AI的范式转移-VMark代码考古.md" class="article-card">
+                <h3 class="article-title">AI 的范式转移：VMark 代码考古</h3>
+                <div class="article-meta">⭐ 257 stars | TypeScript, Rust | 2026-01-03</div>
+                <p class="article-desc">
+                    AI 原生 Markdown 编辑器，完全由 AI 在人类监督下编写。
+                    从"AI 辅助人类"到"人类监督 AI"：软件开发的新分工模式。
+                </p>
+            </a>
+        </section>
+        
+        <section class="skill-section">
+            <h2>🤖 自动化工具</h2>
+            <p>
+                本系列文章使用 <code>xiaojun-github-research</code> 技能自动生成。
+                该技能封装了完整的 GitHub 项目考古工作流程：克隆仓库、获取元数据、
+                分析代码结构、撰写深度报告、清理临时文件。
+            </p>
+            <p style="margin-top: 15px;">
+                <a href="xiaojun-github-research/" style="color: #0366d6;">查看技能文档 →</a>
+            </p>
+        </section>
+        
+        <footer>
+            <p>由 <a href="https://github.com/hongxiaojun" style="color: #0366d6;">hongxiaojun</a> 创建 | 使用 Claude Code 辅助</p>
+            <p style="margin-top: 10px;">
+                <a href="https://github.com/hongxiaojun/xiaojun-github-research" style="color: #0366d6;">GitHub 仓库</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
